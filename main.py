@@ -1,4 +1,4 @@
-import discord, random
+import discord, random, os
 from discord.ext import commands
 
 intents = discord.Intents.default()
@@ -109,4 +109,5 @@ async def init(ctx):
     teamList = []
     await ctx.send(f'초기화 되었어요!\n다시 팀 설정과 멤버추가를 해주세요!')
 
-bot.run('MTEzNTY5ODkyMzMxMTM0OTkzMQ.GL-60p.F3_sAkPh10S-nSOA2KNdMHXvAgfE5DkEJfDk_I')
+access_token = os.environ['BOT_TOKEN']
+bot.run(access_token)
